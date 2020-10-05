@@ -8,3 +8,15 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     chrome.tabs.sendMessage(activeTab.id, {"message": "clicked_browser_action"});
   });
 });
+
+chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
+    if (msg.action === "updateIcon") {
+        if (msg.value) {
+            chrome.browserAction.setIcon({path: "iconaa128g.png"});
+            chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
+			chrome.browserAction.setBadgeText({text: msg.count.toString()});
+        } else {
+            chrome.browserAction.setIcon({path: "iconaa128.png"});
+        }
+    }
+});

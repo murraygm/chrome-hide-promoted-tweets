@@ -3,7 +3,7 @@
 
   "name": "No more promoted tweets",
   "description": "hide promoted tweets",
-  "version": "1.0",
+  "version": "1.1",
 
   "content_scripts": [
 

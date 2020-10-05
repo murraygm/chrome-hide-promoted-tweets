@@ -10,12 +10,17 @@ var totalAds = 0;
 function clearPromoted () {
 	var adElementsArr = document.querySelectorAll('[data-testid="placementTracking"]'), i;
 	for (i = 0; i < adElementsArr.length; ++i) {
-	  if(adElementsArr[i].style.display != "none"){
+	  if(adElementsArr[i].style.display != "none" && adElementsArr[i].firstChild.getAttribute("data-testid") != 'videoPlayer'){
 	  	adElementsArr[i].style.display = "none";
 	    totalAds = totalAds+1;
-	  }	  
+	    chrome.runtime.sendMessage({
+		    action: 'updateIcon',
+		    value: true,
+		    count: totalAds
+		});
+	  }
 	};
-	//console.log(totalAds + ' ads found, ' + totalAds + ' ads hidden')
+	console.log(totalAds + ' ads found, ' + totalAds + ' ads hidden')
 }
 
 window.onload=function(){
