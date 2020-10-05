@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "No more promoted tweets",
+  "description": "hide promoted tweets",
+  "version": "1.0",
+
+  "content_scripts": [
+
+    {
+      "matches": ["https://*.twitter.com/*"],
+    "js":["content.js"]
+    }
+
+  ],
+  "browser_action": {
+    "default_icon": "iconaa128.png",
+    "default_title": "Hiding promoted tweets every 5secs, click to hide now"
+  },
+  "icons": { "16": "iconaa16.png",
+           "48": "iconaa48.png",
+          "128": "iconaa128.png" },
+  "background": {
+    "scripts": ["background.js"]
+  }
+
+
+}
+
