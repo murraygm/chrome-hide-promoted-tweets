@@ -24,6 +24,11 @@ function clearPromoted () {
 }
 
 window.onload=function(){
+	chrome.runtime.sendMessage({
+		    action: 'updateIcon',
+		    value: false,
+		    count: totalAds
+		});
     clearPromoted ()
 }
 
