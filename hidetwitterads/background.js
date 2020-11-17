@@ -13,14 +13,14 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
     if (msg.action === "updateIcon") {
         if (msg.value) {
             chrome.browserAction.setIcon({path: "iconaa128g.png"});
-            chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
-			      chrome.browserAction.setBadgeText({text: msg.count.toString()});
-            chrome.browserAction.setTitle({title: msg.count.toString() + ' promoted tweets hidden'});
+            //chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
+			//      chrome.browserAction.setBadgeText({text: msg.count.toString()});
+            chrome.browserAction.setTitle({title: msg.count.toString() + ' promoted ads hidden'});
         } else {
             chrome.browserAction.setIcon({path: "iconaa128.png"});
             chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
             chrome.browserAction.setBadgeText({text: ''});
-            chrome.browserAction.setTitle({title: 'checking every 5 secs for promoted tweets'});
+            chrome.browserAction.setTitle({title: 'checking every 5 secs for promoted ads'});
         }
     }
 });

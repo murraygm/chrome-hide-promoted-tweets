@@ -1,21 +1,21 @@
 {
   "manifest_version": 2,
 
-  "name": "No more promoted tweets",
-  "description": "hide promoted tweets",
-  "version": "1.1",
+  "name": "No more promoted content on twitter or linkedin",
+  "description": "hide promoted content on twitter and linkedin",
+  "version": "1.4",
 
   "content_scripts": [
 
     {
-      "matches": ["https://*.twitter.com/*"],
+      "matches": ["https://*.twitter.com/*", "https://*.linkedin.com/*"],
     "js":["content.js"]
     }
 
   ],
   "browser_action": {
     "default_icon": "iconaa128.png",
-    "default_title": "Hiding promoted tweets every 5secs, click to hide now"
+    "default_title": "Hiding promoted stuff every 5secs, click to hide now"
   },
   "icons": { "16": "iconaa16.png",
            "48": "iconaa48.png",
