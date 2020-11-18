@@ -3,7 +3,7 @@ Very simple chrome extension that hides promoted tweets in your feed on twitter.
 And now also hides Ads and promoted posts from your LinkedIn.com feed
 
 
-If you want to grab it and try it out from here, you'll need to turn on 'developer mode' on the extensions tab in Chrome, then 'load unpackacked' and find the downloaded/unzipped folder 'hidetwitterads'. It will add a little icon to the browser ![ico](hidetwitterads/iconaa48.png), but if enabled it will automatically run. Eventually this will go up on Chrome-extensions for easy install.
+If you want to grab it and try it out from here, you'll need to turn on 'developer mode' on the extensions tab in Chrome, then 'load unpackacked' and find the downloaded/unzipped folder 'hidetwitterads'. It will add a little icon to the browser ![ico](hidetwitterads/iconaa128g.png =30x30), but if enabled it will automatically run. Eventually this will go up on Chrome-extensions for easy install.
 
 Next steps
 * add on/off switch
